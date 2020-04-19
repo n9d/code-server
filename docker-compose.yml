@@ -1,0 +1,12 @@
+version: '3'
+services:
+  code:
+    image: codercom/code-server:latest
+    environment:
+      PASSWORD: password
+    user: "${UID}:${GID}"
+    volumes:
+      - .:/home/coder/project
+    ports:
+      - "8080:8080"
+
